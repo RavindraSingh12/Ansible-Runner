@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  gather_facts: false
+  
+  tasks:
+    
+    - name: use output var from registerVarSameHost
+      shell: cat "{{ output }}" | tail -l 
+      register: output2
+   
+    - debug: msg="{{ output2 }}" 
+    

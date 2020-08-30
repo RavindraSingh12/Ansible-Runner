@@ -1,0 +1,15 @@
+---
+old_companies:
+- name: Atmecs technologies
+  location: Hyderabad
+- name: UST Global
+  location: Banglore
+- name: Reliance JIO infocomm
+  location: Navi Mumbai
+
+admin: ravindra
+
+contact: 7977517750
+
+http_proxy: http://10.157.29.1:8080
+https_proxy: http://10.157.29.1:8080

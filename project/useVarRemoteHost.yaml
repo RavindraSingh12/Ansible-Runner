@@ -1,0 +1,13 @@
+---
+- hosts: k8smaster2
+  gather_facts: false
+  become_user: centos  
+  tasks:
+    
+    - name: use output var from registerVarSameHost
+      shell: cat "{{ hostvars['dummyhost']['play1var'] }}" | tail -l 
+      register: output2
+   
+    - name: using output variable captured from k8smaster1 in k8smaster2 
+      debug: msg="{{ output2 }}" 
+    

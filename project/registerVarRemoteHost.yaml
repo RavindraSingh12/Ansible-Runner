@@ -1,0 +1,22 @@
+---
+- hosts: k8smaster1
+#  gather_facts: false
+  become_user: centos
+  tasks:
+    
+    - name: check file status
+      stat:
+        path: /etc/example.txt
+      register: output
+
+    - name: logging captured variable output
+      debug: msg="{{ output }}"
+
+    - name: register output var to a dummy host var
+      add_host: 
+        name: "dummyhost"
+        play1var: "{{ output }}"
+ 
+    
+    - name: Show remote host distribution
+      debug: msg="{{ ansible_distribution }}"

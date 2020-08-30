@@ -1,0 +1,8 @@
+---
+
+#combining multiple playbooks
+
+- import_playbook: registerVarRemoteHost.yaml
+- import_playbook: useVarRemoteHost.yaml
+- import_playbook: extraVarList.yaml
+- import_playbook: uploadContent.yaml

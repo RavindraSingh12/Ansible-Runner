@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  gather_facts: false
+
+  tasks:
+    
+    - name: check file status
+      stat:
+        path: /etc/example.txt
+      register: output
+
+    - debug: msg="{{ output }}"

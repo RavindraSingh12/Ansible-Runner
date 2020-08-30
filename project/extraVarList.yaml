@@ -1,0 +1,27 @@
+---
+- hosts: k8smaster1
+  vars:
+    dynamiclist: []
+  tasks:
+     
+    - name: show old_companies var
+      debug: msg= "{{ old_companies }}" 
+   
+    - name: create a list from extra vars
+      set_fact:
+        my_previous_orgs: "{{ old_companies | map(attribute='name') | list }}"
+
+    - name: show the list created
+      debug: msg= "{{ my_previous_orgs }}"
+
+    
+    - name: append in dynamiclist
+      set_fact:
+        dynamiclist: "{{ dynamiclist + [item] }}"
+      with_items: 
+        - "{{ old_companies }}"
+        - "{{ admin }}"
+        - "{{ contact }}"
+
+    - name: show the list created
+      debug: msg= "{{ dynamiclist }}"
