@@ -58,7 +58,7 @@ CONFIGURATION
    structure required for Ansible Runner to identify playbooks, vars, templates,
    roles etc.
    - Follow this dir structure to use this playbook
-   ![structure](https://www.google.com/url?sa=i&url=https%3A%2F%2Fswapps.com%2Fblog%2Fgo-beyond-with-automation-ansible-runner%2F&psig=AOvVaw0snxV1yFfXiyM8qpgRzucE&ust=1598849523271000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPi5suOQwusCFQAAAAAdAAAAABAD)
+   ![structure](https://cdn.swapps.com/uploads/2019/10/image-6.png)
    - Add private ssh key to env/ssh_key file.
    - Add extra vars to env/extravars file.
    - Add all playbooks to project/ folder.
