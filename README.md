@@ -67,8 +67,8 @@ CONFIGURATION
 USAGE
 -----
 
-    * source venv/bin/activate.sh
-   >(venv) * python3 run.py
+   source venv/bin/activate.sh
+   >(venv) python3 run.py
 
 
 TASKS AND SOLUTIONS
